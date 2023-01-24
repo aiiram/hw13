@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+
+
+.wrapper {
+  background-color: #ebeddf;
+}
+
+.content {
+  padding: 50px;
+}
+
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #34d5eb;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  animation-name: blue-circle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: -2s;
+
+  animation: blue-circle 2s linear infinite alternate
+}
+
+
+
+.content:hover .content__circle {
+  animation-play-state: paused;
+}
+
+@keyframes blue-circle {
+  0% {
+    left: 0
+  }
+
+  50% {
+    border-radius: 0%;
+    background: crimson;
+  }
+
+  100% {
+    left: 500px;
+  }
+}
